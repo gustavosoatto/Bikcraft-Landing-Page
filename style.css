@@ -1,0 +1,291 @@
+/* Reset */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: #f7f7f7;
+}
+
+main {
+    display: grid;
+    background-color: #f7f7f7;
+    place-content: center;
+    padding: 0%;
+}
+
+h1, h2, p, ul {
+    margin: 0%;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    font-size: inherit;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*  */
+
+.bikcraft {
+    display: flex;
+    place-content: center;
+    margin: 4rem auto;
+}
+
+.menu {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    place-content: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.menu a {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    color: #000;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    display: block;
+    border: 2px solid #fff;
+}
+
+header {
+    margin-bottom: 4rem;
+}
+
+nav a:focus {
+    border-color: #ee2211;
+}
+
+nav a:hover {
+    border-color: #ee2211;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto 1fr;
+    max-width: 1000px;
+    place-content: center;
+    margin: 0px 100px;
+}
+
+.descricao {
+    display: grid;
+    grid-template-rows: 0px auto auto auto;
+    place-items: center end;
+    text-align: right;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.descricao h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.descricao::before {
+    content: "";
+    border: solid #ee2211;
+    border-width: 2px 2rem;
+    position: relative;
+    margin: 0px -4rem;
+}
+
+.foto{
+    max-width: 100%;
+    display: block;
+}
+
+.introdução-cover img{
+    object-fit: cover;
+    height: 100%;
+}
+
+.descricao a {
+    background-color: #ee2211;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    color: #f7f7f7;
+}
+
+.descricao a:focus {
+    background-color: #900;
+}
+
+.descricao a:hover {
+    background-color: #900;
+}
+
+.vantagens {
+    color: #c6c6c6;
+    font-size: 4rem;
+    text-align: right;
+    padding: 2rem;
+    place-self:center;
+    background-image: url(./img/onda.svg);
+}
+
+.vantagens-itens {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 2rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0px auto auto;
+    place-items: start;
+    padding: 1rem;
+    padding-left: 3rem;
+    font-size: 1.25rem;
+}
+
+.card:nth-child(odd) {
+    background: #f7f7f7;
+}
+
+.card:hover {
+    border-left:4px solid #ee2211;
+}
+
+#eletrico::before {
+    content: url("./img/eletrica.svg");
+    margin: 0px -2rem;
+    position: relative;
+}
+
+#velocimetro::before {
+    content: url("./img/velocidade.svg");
+    margin: 0px -2rem;
+    position: relative;
+}
+
+#rastreador::before {
+    content: url("./img/rastreador.svg");
+    margin: 0px -2rem;
+    position: relative;
+}
+
+.card p {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.rodape {
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;  
+    font-size: 1.25rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 1050px) {  
+    .bikcraft {
+        margin: 2rem auto;
+    }
+
+    .menu {
+        gap: 0.5rem;
+        font-size: small;
+    }
+    
+    .menu a {
+        padding: 0.5rem 1rem;
+    }
+    
+    header {
+        margin-bottom: 2rem;
+    }
+
+    .layout {
+        margin: 0px 2rem;
+        max-width: 800px;
+    }
+
+    .descricao {
+        padding: 1.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    .descricao h2 {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .descricao::before {
+        content: "";
+        border: solid #ee2211;
+        border-width: 2px 1.5rem;
+        position: relative;
+        margin: 0px -3.5rem;
+    }
+    
+    .descricao a {
+        padding: 1rem 2rem;
+        font-size: 1rem;  
+    }
+    
+    .vantagens {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+    
+    .vantagens-itens {
+        padding: 1rem;
+    }
+    
+    .card {
+        padding: 1rem;
+        padding-left: 3rem;
+        font-size: 1rem;
+    }
+    
+    .card:hover {
+        border-left:3px solid #ee2211;
+    }
+    
+    .rodape {
+        font-size: 1rem;
+        margin-top: 3rem;
+    }
+
+    @media (max-width: 800px) {  
+        .layout {
+            grid-template-columns: 1fr; 
+            margin: 0px 100px;
+            max-width: 600px;
+        }
+        .descricao::before {
+            display: none;
+        }
+        .descricao {
+            grid-template-rows: auto;
+            place-items: center start;
+            text-align: left;
+            padding: 2rem;
+            row-gap: 1rem;
+        }
+        .layout {
+            margin: 0px 1rem;
+        }
+        .vantagens {
+            text-align: center;
+        }
+        .rodape {
+            margin-top: 2rem;
+        }
+    }
+}
